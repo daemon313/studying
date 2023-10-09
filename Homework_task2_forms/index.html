@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_index.css">
+    <title>Forms</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .custom-button {
+    width: 150px; /* Ширина кнопки */
+    padding: 10px;
+    background-color: #86989B; /* Колір фону */
+    color: #fff; /* Колір тексту */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Закруглені кути */
+    transition: background-color 0.3s ease; /* Анімація при зміні кольору */
+  }
+
+    .custom-button:hover {
+    background-color: #444; /* Колір фону при наведенні курсору */
+  }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <h2>Оцінка продукту:</h2>
+
+            <label for="poor">Погано</label>
+            <input type="radio" id="poor" name="product-rating" value="poor"><br>
+
+            <label for="excellent">Відмінно</label>
+            <input type="radio" id="excellent" name="product-rating" value="excellent"><br>
+
+            <label for="profile-image">Завантажити зображення профілю:</label>
+            <input type="file" id="profile-image" name="profile-image" lang="uk-UA"><br>
+
+            <label for="datetime">Оберіть дату та час:</label>
+            <input type="datetime-local" id="datetime" name="datetime" lang="UA"><br>
+
+            <label>Оберіть опції:</label><br>
+
+            <label for="option1">Опція 1</label>
+            <input type="checkbox" id="option1" name="options" value="option1"><br>
+
+            <label for="option2">Опція 2</label>
+            <input type="checkbox" id="option2" name="options" value="option2"><br>
+
+            <label for="review">Ваш відгук:</label><br>
+
+            <input type="text" id="name" name="name" placeholder="Ваше ім'я"><br>
+
+            <textarea id="review" name="review" rows="4" cols="50" placeholder="Ваш відгук"></textarea><br>
+
+            <input type="number" id="rating" name="rating" placeholder="Ваш рейтинг (1-5)" min="1" max="5"><br>
+
+            <label for="phone">Введіть номер телефону:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="XXX-XX-XXX"><br>
+
+            <label for="color">Оберіть колір:</label><br>
+            <input type="color" id="color" name="color"><br>
+
+            <input type="submit" class="custom-button" value="Відправити">
+            <input type="reset" class="custom-button" value="Скинути">
+        </form>
+    </div>
+    <div class="form-container">
+        <form>
+        <h2>Форма для замовлення квитків</h2>
+        <div class="form-group">
+            <label for="first-name">Ім'я:</label>
+            <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Прізвище:</label>
+            <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="form-group">
+            <label for="credit-card">Номер кредитної карти:</label>
+            <input type="text" id="credit-card" name="credit-card" pattern="[0-9]{16}" required>
+            <small>Будь ласка, введіть 16 цифр.</small>
+        </div>
+        <div class="form-group">
+            <label for="expiry-date">Дата закінчення строку дії карти:</label>
+            <input type="date" id="expiry-date" name="expiry-date" required>
+        </div>
+            <button type="submit" class="custom-button" >Замовити білети</button>
+            <input type="reset" class="custom-button" value="Скинути">
+        </form>
+    </div>
+</body>
+</html>
